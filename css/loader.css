@@ -1,0 +1,64 @@
+/* Loader wrapper */
+.preloader-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: #eee;
+    transition: all 0.2s ease;
+}
+
+/* Loader wrapper text */
+.preloader-wrapper p {
+    color: #424242;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.preloader {
+    position: relative;
+    width: 300px;
+}
+
+.preloader:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+/* Grote van Loader */
+.Labyrintboek {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* Loader animatie stijl */
+.Tekenboek {
+    stroke-dasharray: 1200 150;
+    stroke-dashoffset: 2700;
+    animation: Labyrintboek 20s linear infinite;
+}
+
+/* Animeer de bewegingen per keyframe */
+@keyframes Labyrintboek {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: 1000;
+    }
+}
